@@ -10,9 +10,12 @@ cache:
   - ~/.npm
   - ~/.cache
   - node_modules
-deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
-  on:
-    tags: true
+jobs:
+  include:
+  - stage: npm release
+    deploy:
+      provider: npm
+      email: "$NPM_EMAIL"
+      api_key: "$NPM_TOKEN"
+      on:
+        tags: true
