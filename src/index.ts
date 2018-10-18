@@ -1,3 +1,3 @@
-import NumberReader from "./NumberReader";
+import NumberReader from './NumberReader'
 
 export default NumberReader
