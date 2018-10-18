@@ -1,0 +1,8 @@
+# test fixtures
+src/tests
+
+# Typescript configurations
+tsconfig.*
+
+# JetBrains IDEs
+#.idea

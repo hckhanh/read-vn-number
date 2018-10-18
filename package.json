@@ -1,0 +1,45 @@
+{
+  "name": "read-vn-number",
+  "version": "0.0.1",
+  "description": "Read number in Vietnamese",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "module": "dist/es6/index.js",
+  "es2015": "dist/es6/index.js",
+  "esnext": {
+    "main": "dist/esnext/index.js"
+  },
+  "scripts": {
+    "build:cjs": "tsc",
+    "build:es6": "tsc --build tsconfig.es6.json",
+    "build:esnext": "tsc --build tsconfig.esnext.json",
+    "build:amd": "tsc --build tsconfig.amd.json",
+    "test": "mocha -r ts-node/register src/tests/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://demo"
+  },
+  "keywords": [
+    "read",
+    "reader",
+    "vnd",
+    "currency",
+    "number",
+    "vietnamese",
+    "vn"
+  ],
+  "author": "Khanh Hoang",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  },
+  "dependencies": {}
+}
