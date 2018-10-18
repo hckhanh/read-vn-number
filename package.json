@@ -1,6 +1,6 @@
 {
   "name": "read-vn-number",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "This is a helper that convert a number to string like the way a Vietnamese read it",
   "sideEffects": false,
   "main": "dist/cjs/index.js",
