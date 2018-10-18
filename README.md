@@ -37,4 +37,4 @@ NumberReader.read('100000000')
 
 ## License
 
-MIT © Khanh Hoang
+[MIT](LICENSE) © Khanh Hoang
