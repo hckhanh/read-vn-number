@@ -5,7 +5,11 @@ This is a helper that convert a number to string like the way a Vietnamese read 
 ## Installation
 
 ```bash
+# npm
 npm i read-vn-number
+
+# yarn
+yarn add read-vn-number
 ```
 
 ## Usage
@@ -13,18 +17,18 @@ npm i read-vn-number
 Import and use in **ES6**+:
 
 ```ecmascript 6
-import ReadVnNumber from 'read-vn-number'
+import NumberReader from 'read-vn-number'
 
-ReadVnNumber.read('19990000')
+NumberReader.read('19990000')
 // output: mười chín triệu chín trăm chín mươi nghìn 
 ```
 
 or **commonjs** way:
 
 ```ecma script level 4
-const ReadVnNumber = require('read-vn-number')
+const NumberReader = require('read-vn-number')
 
-ReadVnNumber.read('100000000')
+NumberReader.read('100000000')
 // output: một trăm triệu
 ```
 

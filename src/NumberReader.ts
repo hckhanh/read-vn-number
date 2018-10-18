@@ -4,12 +4,13 @@ import Million from "./Million";
 import Billion from "./Billion";
 
 /**
- * Number Reader
+ * A number reader like Vietnamese way helper
  */
 export default class NumberReader {
   /**
-   * Read number in Vietnamese
+   * Read a number in Vietnamese
    * @param number the number to read
+   * @return a string in vietnamese way
    */
   public static read(number: string | number): string {
     let s: string = "";
@@ -67,11 +68,5 @@ export default class NumberReader {
       default:
         return new Numbers("");
     }
-  }
-}
-
-export class A {
-  demo(): void {
-    console.log('this is demo')
   }
 }

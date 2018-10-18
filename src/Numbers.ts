@@ -1,66 +1,4 @@
-/**
- * 89.498.491.651.651.651.681.681.681
- * Tám mươi chín ngàn (nghìn)
- * Bốn trăm chín mươi tám
- *
- * 681
- * Sáu
- * trăm
- * tám
- * mươi mốt (một)
- *
- * nghìn
- * triệu
- * tỉ
- *
- * 6
- * Sáu
- * 60
- * Sáu mươi
- * 600
- * Sáu trăm
- * 6.000
- * Sáu ngàn
- * 60.000
- * Sáu mươi ngàn
- * 60.001
- * Sáu mươi ngàn không trăm lẻ một
- * 600.000
- * Sáu trăm ngàn
- * 6.000.000
- * Sáu triệu
- *
- * 5
- * Năm
- * 32
- * Ba mươi hai
- * 15
- * Mười lăm
- * 21
- * Hai mươi mốt
- * 001
- * Không trăm lẻ một
- * 068
- * Không trăm sáu mươi tám
- * 162
- * Một trăm sáu mươi hai
- * 601
- * Sáu trăm lẻ một
- * 155
- * Một trăm năm mươi lăm
- * 600
- * Sáu trăm
- * 610
- * Sáu trăm mười
- * 001 (first group)
- * một
- * 021 (first group)
- * Hai mốt
- */
-
-type NumberMap = { [key:string]: string }
-
-const numberMap: NumberMap = {
+const numberMap = {
   "0": "không",
   "1": "một",
   "2": "hai",
@@ -73,6 +11,9 @@ const numberMap: NumberMap = {
   "9": "chín"
 };
 
+/**
+ * A group three numbers, a component in the input number
+ */
 export default class Numbers {
   protected first: string = '';
   protected second: string = '';
@@ -90,6 +31,12 @@ export default class Numbers {
     }
   }
 
+  /**
+   * Read three digits of group number
+   * @param firstNumber indicate that this is the first group number or not
+   * @param beforeBillion indicate that this group number stands before a {@link Billion} group or not
+   * @return the number in string in Vietnamese way
+   */
   public read(firstNumber?: boolean, beforeBillion?: boolean): string {
     let s: string = "";
 
