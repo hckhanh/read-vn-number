@@ -16,7 +16,7 @@ yarn add read-vn-number
 
 Import and use in **ES6**+:
 
-```ecmascript 6
+```js
 import NumberReader from 'read-vn-number'
 
 NumberReader.read('19990000')
@@ -25,7 +25,7 @@ NumberReader.read('19990000')
 
 or **commonjs** way:
 
-```ecma script level 4
+```js
 const NumberReader = require('read-vn-number')
 
 NumberReader.read('100000000')
