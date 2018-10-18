@@ -28,6 +28,9 @@ jobs:
         skip_cleanup: true
         on:
           tags: true
+stages:
+  - name: npm release
+    if: branch = master
 notifications:
   email:
     on_success: never # default: change
