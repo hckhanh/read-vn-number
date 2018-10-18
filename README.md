@@ -2,6 +2,8 @@
 
 This is a helper that convert a number to string like the way a Vietnamese read it
 
+[![Build Status](https://travis-ci.org/hckhanh/read-vn-number.svg?branch=master)](https://travis-ci.org/hckhanh/read-vn-number)
+
 ## Installation
 
 ```bash

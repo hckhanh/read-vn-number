@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '10'
+  - '11'
+cache:
+  directories:
+  - ~/.npm
+  - ~/.cache
+  - node_modules
+deploy:
+  provider: npm
+  email: "$TRAVIS_EMAIL"
+  api_key: "$TRAVIS_TOKEN"
+  on:
+    tags: true
