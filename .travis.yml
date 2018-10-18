@@ -14,6 +14,7 @@ cache:
 jobs:
   include:
     - stage: npm release
+      if: branch = master
       node_js: 'node'
       script:
         - npm run build:cjs
