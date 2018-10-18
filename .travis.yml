@@ -13,10 +13,17 @@ cache:
   - node_modules
 jobs:
   include:
-  - stage: npm release
-    deploy:
-      provider: npm
-      email: "$NPM_EMAIL"
-      api_key: "$NPM_TOKEN"
-      on:
-        tags: true
+    - stage: npm release
+      node_js: 'node'
+      script:
+        - npm run build:cjs
+        - npm run build:es6
+        - npm run build:esnext
+        - npm run build:amd
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key: "$NPM_TOKEN"
+        skip_cleanup: true
+        on:
+          tags: true
