@@ -1,4 +1,4 @@
-const numberMap = {
+const NumberMap: { [key: string]: string } = {
   "0": "không",
   "1": "một",
   "2": "hai",
@@ -52,7 +52,7 @@ export default class Numbers {
 
     if (this.first) {
       if (!firstNumber || this.first !== "0") {
-        s = `${numberMap[this.first]} trăm`;
+        s = `${NumberMap[this.first]} trăm`;
       }
     }
 
@@ -64,7 +64,7 @@ export default class Numbers {
           } else if (this.second === "1") {
             s += " mười";
           } else {
-            s += ` ${numberMap[this.second]} mươi`;
+            s += ` ${NumberMap[this.second]} mươi`;
           }
         }
       }
@@ -76,10 +76,10 @@ export default class Numbers {
           } else if (this.last === "5") {
             s += " lăm";
           } else if (this.last !== "0") {
-            s += ` ${numberMap[this.last]}`;
+            s += ` ${NumberMap[this.last]}`;
           }
         } else {
-          s += ` ${numberMap[this.last]}`;
+          s += ` ${NumberMap[this.last]}`;
         }
       }
     }
