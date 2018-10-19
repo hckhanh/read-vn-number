@@ -90,14 +90,12 @@ export default class Numbers {
    * @return the result after adding second number
    */
   private readSecondNumber(s: string, firstNumber?: boolean): string {
-    if (this.second && (!firstNumber || this.second !== '0' || this.first !== '0')) {
-      if (this.second === '0') {
-        s += ' lẻ'
-      } else if (this.second === '1') {
-        s += ' mười'
-      } else {
-        s += ` ${NumberMap[this.second]} mươi`
-      }
+    if (this.second === '0') {
+      s += ' lẻ'
+    } else if (this.second === '1') {
+      s += ' mười'
+    } else if (this.second) {
+      s += ` ${NumberMap[this.second]} mươi`
     }
     return s
   }
