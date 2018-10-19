@@ -5,6 +5,6 @@ import Numbers from './Numbers'
  */
 export default class Billion extends Numbers {
   public read(firstNumber?: boolean, beforeBillion?: boolean): string {
-    return `${super.read(firstNumber)} tỉ`.trim()
+    return `${super.read(firstNumber)} tỷ`.trim()
   }
 }
