@@ -1,4 +1,5 @@
 # read-vn-number
+A number reader in Vietnamese language helper
 
 This is a helper that convert a number to string like the way a Vietnamese read it.
 This library requires **Node.js 6.x** and above.
