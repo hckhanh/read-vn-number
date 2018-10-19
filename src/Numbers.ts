@@ -106,7 +106,7 @@ export default class Numbers {
    * @return the result after adding first number
    */
   private readFirstNumber(s: string, firstNumber?: boolean): string {
-    if (this.first && (!firstNumber || this.first !== '0')) {
+    if (this.first) {
       s = `${NumberMap[this.first]} trăm`
     }
     return s
