@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import NumberReader from '../../NumberReader'
 
-describe('Thousand', function() {
+describe('NumberReader', function() {
   it('should read number: 60.000', function() {
     const number: number = 60000
     expect(NumberReader.read(number)).to.equal('sáu mươi nghìn')
@@ -72,5 +72,35 @@ describe('Thousand', function() {
   it('should read number: 2.000.000.000', function() {
     const number: number = 2000000000
     expect(NumberReader.read(number)).to.equal('hai tỉ')
+  })
+
+  it('should read number: 1.000.000.000.000', function() {
+    const number: string = '1000000000000'
+    expect(NumberReader.read(number)).to.equal('một nghìn tỉ')
+  })
+
+  it('should read number: 1.001.000.000.000', function() {
+    const number: string = '1001000000000'
+    expect(NumberReader.read(number)).to.equal('một nghìn không trăm lẻ một tỉ')
+  })
+
+  it('should read number: 1.001.500.000.000', function() {
+    const number: string = '1001500000000'
+    expect(NumberReader.read(number)).to.equal('một nghìn không trăm lẻ một tỉ năm trăm triệu')
+  })
+
+  it('should read number: 1.001.500.100.000', function() {
+    const number: string = '1001500100000'
+    expect(NumberReader.read(number)).to.equal('một nghìn không trăm lẻ một tỉ năm trăm triệu một trăm nghìn')
+  })
+
+  it('should read number: 1.001.500.100.001', function() {
+    const number: string = '1001500100001'
+    expect(NumberReader.read(number)).to.equal('một nghìn không trăm lẻ một tỉ năm trăm triệu một trăm nghìn không trăm lẻ một')
+  })
+
+  it('should read number: 1.000.001.000.000.000', function() {
+    const number: string = '1000001000000000'
+    expect(NumberReader.read(number)).to.equal('một triệu không trăm lẻ một tỉ')
   })
 })

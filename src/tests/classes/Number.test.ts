@@ -131,12 +131,24 @@ describe('Numbers', function() {
   it('should read first number: 1, before billion group', function() {
     const s: string = '1'
     const number = new Numbers(s)
-    expect(number.read(true, true)).to.equal('một nghìn tỉ')
+    expect(number.read(true, true)).to.equal('một nghìn')
+  })
+
+  it('should read first number: 1, before billion group', function() {
+    const s: string = '1'
+    const number = new Numbers(s)
+    expect(number.read(true, false)).to.equal('một')
+  })
+
+  it('should read first number: 1, before billion group', function() {
+    const s: string = '001'
+    const number = new Numbers(s)
+    expect(number.read(false, true)).to.equal('không trăm lẻ một')
   })
 
   it('should read number: 000, before billion group', function() {
     const s: string = '000'
     const number = new Numbers(s)
-    expect(number.read(false, true)).to.equal('tỉ')
+    expect(number.read(false, true)).to.equal('')
   })
 })
