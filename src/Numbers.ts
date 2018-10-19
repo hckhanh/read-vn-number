@@ -68,14 +68,24 @@ export default class Numbers {
    */
   private readLastNumber(s: string): string {
     if (this.second) {
-      if (this.last === '1' && this.second !== '0' && this.second !== '1') {
-        s += ' mốt'
-      } else if (this.last === '5') {
-        s += ' lăm'
-      } else if (this.last !== '0') {
-        s += ` ${NumberMap[this.last]}`
-      }
+      s = this.readLastAfterSecond(s)
     } else {
+      s += ` ${NumberMap[this.last]}`
+    }
+    return s
+  }
+
+  /**
+   * Read the last number when second number is existed
+   * @param s the number to read
+   * @return the last number in string
+   */
+  private readLastAfterSecond(s: string): string {
+    if (this.last === '1' && this.second !== '0' && this.second !== '1') {
+      s += ' mốt'
+    } else if (this.last === '5') {
+      s += ' lăm'
+    } else if (this.last !== '0') {
       s += ` ${NumberMap[this.last]}`
     }
     return s
