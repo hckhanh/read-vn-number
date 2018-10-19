@@ -69,18 +69,16 @@ export default class Numbers {
    * @return the result after adding last number
    */
   private readLastNumber(s: string): string {
-    if (this.last && (this.second !== '1' || this.last !== '0')) {
-      if (this.second) {
-        if (this.last === '1' && this.second !== '0' && this.second !== '1') {
-          s += ' mốt'
-        } else if (this.last === '5') {
-          s += ' lăm'
-        } else if (this.last !== '0') {
-          s += ` ${NumberMap[this.last]}`
-        }
-      } else {
+    if (this.second) {
+      if (this.last === '1' && this.second !== '0' && this.second !== '1') {
+        s += ' mốt'
+      } else if (this.last === '5') {
+        s += ' lăm'
+      } else if (this.last !== '0') {
         s += ` ${NumberMap[this.last]}`
       }
+    } else {
+      s += ` ${NumberMap[this.last]}`
     }
     return s
   }
