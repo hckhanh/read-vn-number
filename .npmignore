@@ -5,4 +5,14 @@ src/tests
 tsconfig.*
 
 # JetBrains IDEs
-#.idea
+.idea
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nycrc
+.nyc_output
+
+# travis-ci
+.travis.yml
