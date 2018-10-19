@@ -4,24 +4,62 @@ import Numbers from './Numbers'
 import Thousand from './Thousand'
 
 /**
- * A number reader like Vietnamese way helper
+ * A number reader in Vietnamese language helper
  */
 export default class NumberReader {
   /**
-   * Read a number in Vietnamese
+   * Read a number in Vietnamese language
    * @param number the number to read
-   * @return a string in vietnamese way
+   * @return a string of the number is read in vietnamese
    */
   public static read(number: string | number): string {
     let s: string = ''
-    const numberGroups: string[] = []
-
     if (typeof number === 'number') {
       s = number.toString()
     } else if (typeof number === 'string') {
       s = number
     }
 
+    const numberGroups = this.getGroupNumbers(s)
+    const numbers = this.mapToNumbers(numberGroups)
+    return this.readNumbers(numbers)
+  }
+
+  /**
+   * Convert all {@link Numbers} objects to a string
+   * @param numbers an array of {@link Numbers} objects
+   * @return a {@link string} of the number is read in vietnamese
+   */
+  private static readNumbers(numbers: Numbers[]): string {
+    return numbers
+      .reduce(function(result, group: Numbers, index: number) {
+        const beforeBillion = index + 1 < numbers.length && numbers[index + 1] instanceof Billion
+        return result + ' ' + group.read(index === 0, beforeBillion)
+      }, '')
+      .trim()
+  }
+
+  /**
+   * Map all group numbers in {@link string} to {@link Numbers} objects
+   * @param numberGroups group of numbers in string
+   * @return an array of {@link Numbers}
+   */
+  private static mapToNumbers(numberGroups: string[]): Numbers[] {
+    const numbers: Numbers[] = []
+
+    for (let i = numberGroups.length - 1, currentType = 0; i >= 0; i--) {
+      numbers.unshift(this.getNumber(numberGroups[i], currentType++))
+      currentType %= 4
+    }
+    return numbers
+  }
+
+  /**
+   * Generate a group of numbers from a string of number
+   * @param s input string of number
+   */
+  private static getGroupNumbers(s: string): string[] {
+    const numberGroups: string[] = []
     const nGroup = Math.floor(s.length / 3)
 
     for (let i = 0; i < nGroup; i++) {
@@ -31,28 +69,14 @@ export default class NumberReader {
     if (s.length % 3 !== 0) {
       numberGroups.unshift(s.substr(0, s.length % 3))
     }
-
-    const numbers: Numbers[] = []
-
-    for (let i = numberGroups.length - 1, currentType = 0; i >= 0; i--) {
-      numbers.unshift(this.getNumber(numberGroups[i], currentType++))
-      currentType %= 4
-    }
-
-    return numbers
-      .reduce(function(result, group: Numbers, index: number) {
-        let beforeBillion = false
-        if (
-          index + 1 < numbers.length &&
-          numbers[index + 1] instanceof Billion
-        ) {
-          beforeBillion = true
-        }
-        return result + ' ' + group.read(index === 0, beforeBillion)
-      }, '')
-      .trim()
+    return numberGroups
   }
 
+  /**
+   * Map a number in string to a {@link Numbers} object
+   * @param s input string to map
+   * @param type type number of the {@link Numbers} object
+   */
   private static getNumber(s: string, type: number): Numbers {
     switch (type) {
       case 0:
