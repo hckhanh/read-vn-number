@@ -52,7 +52,7 @@ export default class Numbers {
 
     s = this.readFirstNumber(s, firstNumber)
     if (this.second !== '0' || this.last !== '0') {
-      s = this.readSecondNumber(s, firstNumber)
+      s = this.readSecondNumber(s)
       s = this.readLastNumber(s)
     }
 
@@ -86,10 +86,9 @@ export default class Numbers {
   /**
    * Read the second number of three digits of the {@link Numbers}
    * @param s the input number in string after read first number
-   * @param firstNumber indicate that whether this is the first {@link Numbers} or not
    * @return the result after adding second number
    */
-  private readSecondNumber(s: string, firstNumber?: boolean): string {
+  private readSecondNumber(s: string): string {
     if (this.second === '0') {
       s += ' lẻ'
     } else if (this.second === '1') {
