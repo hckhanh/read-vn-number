@@ -39,8 +39,6 @@ export default class NumberReader {
       currentType %= 4
     }
 
-    console.log(numbers)
-
     return numbers
       .reduce(function(result, group: Numbers, index: number) {
         let beforeBillion = false
