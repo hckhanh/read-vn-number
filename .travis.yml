@@ -21,7 +21,7 @@ jobs:
         - chmod +x ./cc-test-reporter
         - ./cc-test-reporter before-build
       script: nyc npm test
-      after_script: ./cc-test-reporter after-build --exit-code "$TRAVIS_TEST_RESULT"
+      after_script: ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - stage: npm release
       if: tag IS present
       node_js: 'node'
