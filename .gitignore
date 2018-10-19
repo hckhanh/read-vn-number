@@ -17,3 +17,9 @@ dist
 
 # JetBrains IDEs
 .idea
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output

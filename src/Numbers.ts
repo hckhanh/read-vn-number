@@ -12,7 +12,7 @@ const NumberMap: { [key: string]: string } = {
 }
 
 /**
- * A group three numbers, a component in the input number
+ * A group of three numbers, a component in the input number to read
  */
 export default class Numbers {
   protected first: string = ''
@@ -32,8 +32,8 @@ export default class Numbers {
   }
 
   /**
-   * Read three digits of group number
-   * @param firstNumber indicate that this is the first group number or not
+   * Read three digits of {@link Numbers}
+   * @param firstNumber indicate that this is the first {@link Numbers} or not
    * @param beforeBillion indicate that this group number stands before a {@link Billion} group or not
    * @return the number in string in Vietnamese way
    */
@@ -43,51 +43,80 @@ export default class Numbers {
     if (this.first === '0' && this.second === '0' && this.last === '0') {
       if (firstNumber) {
         return 'không'
-      } else if (beforeBillion) {
-        return 'tỉ'
       } else {
         return ''
       }
     }
 
-    if (this.first) {
-      if (!firstNumber || this.first !== '0') {
-        s = `${NumberMap[this.first]} trăm`
-      }
-    }
-
+    s = this.readFirstNumber(s, firstNumber)
     if (this.second !== '0' || this.last !== '0') {
-      if (this.second) {
-        if (!firstNumber || this.second !== '0' || this.first !== '0') {
-          if (this.second === '0') {
-            s += ' lẻ'
-          } else if (this.second === '1') {
-            s += ' mười'
-          } else {
-            s += ` ${NumberMap[this.second]} mươi`
-          }
-        }
-      }
-
-      if (this.last && (this.second !== '1' || this.last !== '0')) {
-        if (this.second) {
-          if (this.last === '1' && this.second !== '0' && this.second !== '1') {
-            s += ' mốt'
-          } else if (this.last === '5') {
-            s += ' lăm'
-          } else if (this.last !== '0') {
-            s += ` ${NumberMap[this.last]}`
-          }
-        } else {
-          s += ` ${NumberMap[this.last]}`
-        }
-      }
+      s = this.readSecondNumber(s)
+      s = this.readLastNumber(s)
     }
 
     if (firstNumber && beforeBillion) {
-      s += ' nghìn tỉ'
+      s += ' nghìn'
     }
 
     return s.trim()
+  }
+
+  /**
+   * Read the first number of three digits of the {@link Numbers}
+   * @param s the input number in string after read second number
+   * @return the result after adding last number
+   */
+  private readLastNumber(s: string): string {
+    if (this.second) {
+      s = this.readLastAfterSecond(s)
+    } else {
+      s += ` ${NumberMap[this.last]}`
+    }
+    return s
+  }
+
+  /**
+   * Read the last number when second number is existed
+   * @param s the number to read
+   * @return the last number in string
+   */
+  private readLastAfterSecond(s: string): string {
+    if (this.last === '1' && this.second !== '0' && this.second !== '1') {
+      s += ' mốt'
+    } else if (this.last === '5') {
+      s += ' lăm'
+    } else if (this.last !== '0') {
+      s += ` ${NumberMap[this.last]}`
+    }
+    return s
+  }
+
+  /**
+   * Read the second number of three digits of the {@link Numbers}
+   * @param s the input number in string after read first number
+   * @return the result after adding second number
+   */
+  private readSecondNumber(s: string): string {
+    if (this.second === '0') {
+      s += ' lẻ'
+    } else if (this.second === '1') {
+      s += ' mười'
+    } else if (this.second) {
+      s += ` ${NumberMap[this.second]} mươi`
+    }
+    return s
+  }
+
+  /**
+   * Read the last number of three digits of the {@link Numbers}
+   * @param s the input number in string
+   * @param firstNumber indicate that whether this is the first {@link Numbers} or not
+   * @return the result after adding first number
+   */
+  private readFirstNumber(s: string, firstNumber?: boolean): string {
+    if (this.first) {
+      s = `${NumberMap[this.first]} trăm`
+    }
+    return s
   }
 }
