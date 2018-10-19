@@ -34,7 +34,7 @@ export default class NumberReader {
     return numbers
       .reduce(function(result, group: Numbers, index: number) {
         const beforeBillion = index + 1 < numbers.length && numbers[index + 1] instanceof Billion
-        return result + ' ' + group.read(index === 0, beforeBillion)
+        return result.trim() + ' ' + group.read(index === 0, beforeBillion)
       }, '')
       .trim()
   }
@@ -49,7 +49,7 @@ export default class NumberReader {
 
     for (let i = numberGroups.length - 1, currentType = 0; i >= 0; i--) {
       numbers.unshift(this.getNumber(numberGroups[i], currentType++))
-      currentType %= 4
+      currentType = currentType === 4 ? 1 : currentType
     }
     return numbers
   }

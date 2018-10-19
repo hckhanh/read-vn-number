@@ -43,8 +43,6 @@ export default class Numbers {
     if (this.first === '0' && this.second === '0' && this.last === '0') {
       if (firstNumber) {
         return 'không'
-      } else if (beforeBillion) {
-        return 'tỉ'
       } else {
         return ''
       }
@@ -57,7 +55,7 @@ export default class Numbers {
     }
 
     if (firstNumber && beforeBillion) {
-      s += ' nghìn tỉ'
+      s += ' nghìn'
     }
 
     return s.trim()
