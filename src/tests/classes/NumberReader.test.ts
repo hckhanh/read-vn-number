@@ -103,4 +103,9 @@ describe('NumberReader', function() {
     const number: string = '1000001000000000'
     expect(NumberReader.read(number)).to.equal('một triệu không trăm lẻ một tỉ')
   })
+
+  it('should read number: 1.000.000.000.000.000.000', function() {
+    const number: string = '1000000000000000000'
+    expect(NumberReader.read(number)).to.equal('một tỉ tỉ')
+  })
 })
