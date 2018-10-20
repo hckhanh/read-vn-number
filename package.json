@@ -15,7 +15,7 @@
     "build:es6": "tsc --build tsconfig.es6.json",
     "build:esnext": "tsc --build tsconfig.esnext.json",
     "build:amd": "tsc --build tsconfig.amd.json",
-    "test": "mocha -r ts-node/register src/tests/**/*.ts"
+    "test": "mocha -r ts-node/register test/**/*.ts"
   },
   "repository": {
     "type": "git",
