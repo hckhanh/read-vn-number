@@ -38,10 +38,14 @@
     "languages",
     "language-processing",
     "text-generation",
+    "helper",
+    "helpers",
     "helpers-library",
     "helper-tool",
     "helper-methods",
-    "helper-class"
+    "helper-class",
+    "helper-functions",
+    "helper-script"
   ],
   "author": "Khanh Hoang",
   "license": "MIT",
