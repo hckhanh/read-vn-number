@@ -22,13 +22,29 @@ export default class Numbers {
   constructor(s: string) {
     if (s.length > 0) {
       this.last = s[s.length - 1]
-      if (s.length > 1) {
-        this.second = s[s.length - 2]
-        if (s.length > 2) {
-          this.first = s[s.length - 3]
-        }
-      }
     }
+
+    if (s.length > 1) {
+      this.second = s[s.length - 2]
+    }
+
+    if (s.length > 2) {
+      this.first = s[s.length - 3]
+    }
+  }
+
+  /**
+   * If the current {@link Numbers} is the first and before a {@link Billion} number, "nghìn" will be suffixed "nghìn"
+   * @param s the current string of the {@link Numbers}
+   * @param firstNumber indicate that this is the first {@link Numbers}
+   * @param beforeBillion indicate that this {@link Numbers} is before a {@link Billion} number
+   * @return the string after suffixing "nghìn"
+   */
+  private static suffixFirstAndBeforeBillion(s: string, firstNumber?: boolean, beforeBillion?: boolean): string {
+    if (firstNumber && beforeBillion) {
+      s += ' nghìn'
+    }
+    return s
   }
 
   /**
@@ -40,25 +56,36 @@ export default class Numbers {
   public read(firstNumber?: boolean, beforeBillion?: boolean): string {
     let s: string = ''
 
-    if (this.first === '0' && this.second === '0' && this.last === '0') {
+    if (this.isZeroNumbers()) {
       if (firstNumber) {
         return 'không'
-      } else {
-        return ''
       }
+      return ''
     }
 
     s = this.readFirstNumber(s, firstNumber)
-    if (this.second !== '0' || this.last !== '0') {
+    if (!this.isLastTwoNumbersZero()) {
       s = this.readSecondNumber(s)
       s = this.readLastNumber(s)
     }
 
-    if (firstNumber && beforeBillion) {
-      s += ' nghìn'
-    }
+    s = Numbers.suffixFirstAndBeforeBillion(s, firstNumber, beforeBillion)
 
     return s.trim()
+  }
+
+  /**
+   * Check whether the last two digits ({@link second) and {@link last}} of the {@link Numbers} are zero or not
+   */
+  private isLastTwoNumbersZero(): boolean {
+    return this.second === '0' && this.last === '0'
+  }
+
+  /**
+   * Check whether all three digits of the {@link Numbers} are zero or not
+   */
+  private isZeroNumbers(): boolean {
+    return this.first === '0' && this.second === '0' && this.last === '0'
   }
 
   /**
