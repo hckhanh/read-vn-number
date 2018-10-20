@@ -34,7 +34,7 @@ export default class Numbers {
   }
 
   /**
-   * If the current {@link Numbers} is the first and before a {@link Billion} number, "nghìn" will be suffixed "nghìn"
+   * If the current {@link Numbers} is the first and before a {@link Billion} number, "nghìn" will be suffixed.
    * @param s the current string of the {@link Numbers}
    * @param firstNumber indicate that this is the first {@link Numbers}
    * @param beforeBillion indicate that this {@link Numbers} is before a {@link Billion} number
