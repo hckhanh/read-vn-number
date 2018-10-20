@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import Billion from '../../Billion'
+import Billion from '../../src/Billion'
 
 describe('Billion', function() {
   it('should read first number: 2.000.000.000', function() {
