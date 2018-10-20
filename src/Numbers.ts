@@ -56,7 +56,7 @@ export default class Numbers {
   public read(firstNumber?: boolean, beforeBillion?: boolean): string {
     let s: string = ''
 
-    if (this.isZeroNumbers()) {
+    if (this.isThreeZero()) {
       if (firstNumber) {
         return 'không'
       }
@@ -64,7 +64,7 @@ export default class Numbers {
     }
 
     s = this.readFirstNumber(s, firstNumber)
-    if (!this.isLastTwoNumbersZero()) {
+    if (!this.isLastTwoZero()) {
       s = this.readSecondNumber(s)
       s = this.readLastNumber(s)
     }
@@ -75,16 +75,16 @@ export default class Numbers {
   }
 
   /**
-   * Check whether the last two digits ({@link second) and {@link last}} of the {@link Numbers} are zero or not
+   * Indicate that whether the last two digits ({@link second) and {@link last}} of the {@link Numbers} are zero or not
    */
-  private isLastTwoNumbersZero(): boolean {
+  private isLastTwoZero(): boolean {
     return this.second === '0' && this.last === '0'
   }
 
   /**
-   * Check whether all three digits of the {@link Numbers} are zero or not
+   * Indicate that whether all three digits of the {@link Numbers} are zero or not
    */
-  private isZeroNumbers(): boolean {
+  private isThreeZero(): boolean {
     return this.first === '0' && this.second === '0' && this.last === '0'
   }
 
