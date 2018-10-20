@@ -1,5 +1,5 @@
 # test fixtures
-src/tests
+test
 
 # Typescript configurations
 tsconfig.*
@@ -14,5 +14,5 @@ coverage
 .nycrc
 .nyc_output
 
-# travis-ci
+# travis ci
 .travis.yml
