@@ -78,17 +78,21 @@ export default class NumberReader {
    * @param type type number of the {@link Numbers} object
    */
   private static getNumber(s: string, type: number): Numbers {
+    let number!: Numbers
     switch (type) {
       case 0:
-        return new Numbers(s)
+        number = new Numbers(s)
+        break
       case 1:
-        return new Thousand(s)
+        number = new Thousand(s)
+        break
       case 2:
-        return new Million(s)
+        number = new Million(s)
+        break
       case 3:
-        return new Billion(s)
-      default:
-        return new Numbers('')
+        number = new Billion(s)
+        break
     }
+    return number
   }
 }
