@@ -1,15 +1,4 @@
-const NumberMap: { [key: string]: string } = {
-  '0': 'không',
-  '1': 'một',
-  '2': 'hai',
-  '3': 'ba',
-  '4': 'bốn',
-  '5': 'năm',
-  '6': 'sáu',
-  '7': 'bảy',
-  '8': 'tám',
-  '9': 'chín'
-}
+import { getNumberFromMap } from './Utils'
 
 /**
  * A group of three numbers, a component in the input number to read
@@ -97,7 +86,7 @@ export default class Numbers {
     if (this.second) {
       s = this.readLastAfterSecond(s)
     } else {
-      s += ` ${NumberMap[this.last]}`
+      s += ` ${getNumberFromMap(this.last)}`
     }
     return s
   }
@@ -113,7 +102,7 @@ export default class Numbers {
     } else if (this.last === '5') {
       s += ' lăm'
     } else if (this.last !== '0') {
-      s += ` ${NumberMap[this.last]}`
+      s += ` ${getNumberFromMap(this.last)}`
     }
     return s
   }
@@ -129,7 +118,7 @@ export default class Numbers {
     } else if (this.second === '1') {
       s += ' mười'
     } else if (this.second) {
-      s += ` ${NumberMap[this.second]} mươi`
+      s += ` ${getNumberFromMap(this.second)} mươi`
     }
     return s
   }
@@ -142,7 +131,7 @@ export default class Numbers {
    */
   private readFirstNumber(s: string, firstNumber?: boolean): string {
     if (this.first) {
-      s = `${NumberMap[this.first]} trăm`
+      s = `${getNumberFromMap(this.first)} trăm`
     }
     return s
   }
