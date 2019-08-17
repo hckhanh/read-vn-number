@@ -29,7 +29,11 @@ export default class Numbers {
    * @param beforeBillion indicate that this {@link Numbers} is before a {@link Billion} number
    * @return the string after suffixing "nghìn"
    */
-  private static suffixFirstAndBeforeBillion(s: string, firstNumber?: boolean, beforeBillion?: boolean): string {
+  private static suffixFirstAndBeforeBillion(
+    s: string,
+    firstNumber?: boolean,
+    beforeBillion?: boolean
+  ): string {
     if (firstNumber && beforeBillion) {
       s += ' nghìn'
     }

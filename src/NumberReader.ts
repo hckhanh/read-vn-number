@@ -16,7 +16,7 @@ export default class NumberReader {
     let s: string = ''
     if (typeof number === 'number') {
       s = number.toString()
-    } else if (typeof number === 'string') {
+    } else {
       s = number
     }
 
@@ -33,7 +33,8 @@ export default class NumberReader {
   private static readNumbers(numbers: Numbers[]): string {
     return numbers
       .reduce(function(result, group: Numbers, index: number) {
-        const beforeBillion = index + 1 < numbers.length && numbers[index + 1] instanceof Billion
+        const beforeBillion =
+          index + 1 < numbers.length && numbers[index + 1] instanceof Billion
         return result.trim() + ' ' + group.read(index === 0, beforeBillion)
       }, '')
       .trim()
