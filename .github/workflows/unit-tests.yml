@@ -1,19 +1,18 @@
 name: Unit tests
 
 on:
+
   pull_request:
     branches:
       - master
 
 jobs:
+
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node: [8.x, 10.x, 12.x]
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node }}
@@ -24,3 +23,21 @@ jobs:
       run: |
         npm ci
         npm test
+
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Code coverages testing
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: code corverage testing
+      run: |
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
+        npm ci
+        npx nyc npm test
+        ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+        
