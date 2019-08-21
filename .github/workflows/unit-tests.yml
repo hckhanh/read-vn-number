@@ -28,15 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Code coverages testing
+    - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: code corverage testing
-      run: |
-        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        chmod +x ./cc-test-reporter
-        ./cc-test-reporter before-build
-        npm ci
-        npx nyc npm test
-        ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+    - name: Code coverages testing
+      uses: paambaati/codeclimate-action@v2.1.0
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
+      with:
+        coverageCommand: npx nyc npm test
