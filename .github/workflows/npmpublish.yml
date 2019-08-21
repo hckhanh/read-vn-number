@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Publish NPM Package
 
 on: release
 
@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - name: build commonjs, es6, esnext and amd
+        run: |
+          npm run build:cjs
+          npm run build:es6
+          npm run build:esnext
+          npm run build:amd
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -14,5 +14,8 @@ coverage
 .nycrc
 .nyc_output
 
-# travis ci
-.travis.yml
+# yaml
+.prettierrc.yaml
+
+# github
+.github
