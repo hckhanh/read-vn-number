@@ -42,6 +42,8 @@ jobs:
         npx nyc npm test
     - name: Upload coverage report
       if: success()
-      run: ./cc-test-reporter after-build --exit-code 0
+      run: |
+        ls
+        ./cc-test-reporter after-build --exit-code 0
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
