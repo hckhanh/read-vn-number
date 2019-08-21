@@ -32,10 +32,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
+    - name: Download CodeClimade Test Reporter
+      run: |
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
     - run: npm ci
-    - name: Code coverages testing
-      uses: paambaati/codeclimate-action@v2.1.0
+    - name: Upload test coverage report
+      run: ./cc-test-reporter after-build --exit-code ${{ success() ? 0 : -1 }}
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
-      with:
-        coverageCommand: npx nyc npm test
