@@ -40,4 +40,3 @@ jobs:
         npm ci
         npx nyc npm test
         ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-        
