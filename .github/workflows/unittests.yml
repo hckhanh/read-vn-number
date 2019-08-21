@@ -1,18 +1,16 @@
 name: Unit tests
 
 on:
-
   pull_request:
     branches:
       - master
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [8.x, 10.x, 12.x]
+        node: [8, 10, 12]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node }}
@@ -23,15 +21,14 @@ jobs:
       run: |
         npm ci
         npm test
-
   coverage:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node }}
+    - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node }}
+        node-version: 12
     - name: Download CodeClimade Test Reporter
       run: |
         curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
