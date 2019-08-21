@@ -28,11 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js 12.x
+    - name: Code coverages testing
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: Code coverages testing
       uses: paambaati/codeclimate-action@v2.1.0
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
