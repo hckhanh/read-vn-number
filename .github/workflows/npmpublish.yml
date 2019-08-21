@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name: build commonjs, es6, esnext and amd
+      - name: Build commonjs, es6, esnext and amd
         run: |
           npm run build:cjs
           npm run build:es6
