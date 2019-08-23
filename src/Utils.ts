@@ -1,3 +1,6 @@
+/**
+ * Mapping object to map a number to string
+ */
 const NumberMap: { [key: string]: string } = {
   '0': 'không',
   '1': 'một',
@@ -11,14 +14,21 @@ const NumberMap: { [key: string]: string } = {
   '9': 'chín'
 }
 
+/**
+ * This is error exception type of {@link NumberReader }
+ */
 export class NotNumberError extends Error {
   constructor(wrongNumber?: string) {
-    const message = `Invalid number: ${wrongNumber}`
-    super(message)
+    super(`Invalid number: ${wrongNumber}`)
     Object.setPrototypeOf(this, new.target.prototype) // restore prototype chain
   }
 }
 
+/**
+ * Get number from {@link NumberMap} according to the input single number
+ * @param number the input number, only 1 char is valid
+ * @return string the number in string
+ */
 export function getNumberFromMap(number: string[1]): string {
   if (NumberMap.hasOwnProperty(number)) {
     return NumberMap[number]
