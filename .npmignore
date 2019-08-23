@@ -1,5 +1,5 @@
 # test fixtures
-test
+tests
 
 # Typescript configurations
 tsconfig.*
@@ -14,8 +14,12 @@ coverage
 .nycrc
 .nyc_output
 
-# yaml
-.prettierrc.yaml
+# prettier
+.prettierrc.yml
+
+# eslint
+.eslintrc.yml
+.eslintignore
 
 # github
 .github
