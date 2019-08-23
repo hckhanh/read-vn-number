@@ -30,7 +30,7 @@ export class NotNumberError extends Error {
  * @return string the number in string
  */
 export function getNumberFromMap(number: string[1]): string {
-  if (NumberMap.hasOwnProperty(number)) {
+  if (Object.prototype.hasOwnProperty.call(NumberMap, number)) {
     return NumberMap[number]
   } else {
     throw new NotNumberError(number)

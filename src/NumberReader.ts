@@ -13,7 +13,7 @@ export default class NumberReader {
    * @return a string of the number is read in vietnamese
    */
   public static read(number: string | number): string {
-    let s: string = ''
+    let s = ''
     if (typeof number === 'number') {
       s = number.toString()
     } else {

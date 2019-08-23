@@ -9,7 +9,7 @@ export default abstract class Zerofill extends Numbers {
    */
   protected abstract get unitName(): string
 
-  public read(firstNumber?: boolean, beforeBillion?: boolean): string {
+  public read(firstNumber?: boolean): string {
     if (this.first !== '0' || this.second !== '0' || this.last !== '0') {
       return `${super.read(firstNumber)} ${this.unitName}`
     } else {
