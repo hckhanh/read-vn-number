@@ -1,6 +1,6 @@
 {
   "name": "read-vn-number",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "A number reader in Vietnamese language helper",
   "sideEffects": false,
   "main": "dist/cjs/index.js",
