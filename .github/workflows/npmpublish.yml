@@ -27,7 +27,9 @@ jobs:
           npm run build:es6
           npm run build:esnext
           npm run build:amd
-      - run: npm publish
+      - name: Publish to npm
+        if: github.event.action == 'published'
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 #  publish-gpr:
