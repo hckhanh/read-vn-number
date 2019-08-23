@@ -4,9 +4,9 @@ import { getNumberFromMap } from './Utils'
  * A group of three numbers, a component in the input number to read
  */
 export default class Numbers {
-  protected first: string = ''
-  protected second: string = ''
-  protected last: string = ''
+  protected first = ''
+  protected second = ''
+  protected last = ''
 
   constructor(s: string) {
     if (s.length > 0) {
@@ -47,7 +47,7 @@ export default class Numbers {
    * @return the number in string in Vietnamese way
    */
   public read(firstNumber?: boolean, beforeBillion?: boolean): string {
-    let s: string = ''
+    let s = ''
 
     if (this.isThreeZero()) {
       if (firstNumber) {
@@ -56,7 +56,7 @@ export default class Numbers {
       return ''
     }
 
-    s = this.readFirstNumber(s, firstNumber)
+    s = this.readFirstNumber(s)
     if (!this.isLastTwoZero()) {
       s = this.readSecondNumber(s)
       s = this.readLastNumber(s)
@@ -130,10 +130,9 @@ export default class Numbers {
   /**
    * Read the last number of three digits of the {@link Numbers}
    * @param s the input number in string
-   * @param firstNumber indicate that whether this is the first {@link Numbers} or not
    * @return the result after adding first number
    */
-  private readFirstNumber(s: string, firstNumber?: boolean): string {
+  private readFirstNumber(s: string): string {
     if (this.first) {
       s = `${getNumberFromMap(this.first)} trăm`
     }
