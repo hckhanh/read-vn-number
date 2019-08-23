@@ -10,8 +10,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
+      - name: Check eslint and unit tests
+        run: npm cit
   publish-npm:
     needs: build
     runs-on: ubuntu-latest

@@ -17,10 +17,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - name: install packages and test
-        run: |
-          npm ci
-          npm test
+      - name: Check eslint and unit tests
+        run: npm cit
   coverage:
     runs-on: ubuntu-latest
     steps:
@@ -34,9 +32,8 @@ jobs:
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           chmod +x ./cc-test-reporter
           ./cc-test-reporter before-build
-      - run: |
-          npm ci
-          npx nyc npm test
+      - name: Generate coverage report
+        run: npx nyc npm cit
       - name: Upload coverage report
         if: success()
         run: ./cc-test-reporter after-build --exit-code 0
