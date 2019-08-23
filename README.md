@@ -26,7 +26,7 @@ Import and use in **ES6**+:
 import NumberReader from 'read-vn-number'
 
 NumberReader.read('19990000')
-// output: mười chín triệu chín trăm chín mươi nghìn 
+// output: mười chín triệu chín trăm chín mươi nghìn
 ```
 
 or **commonjs** way:
@@ -36,6 +36,15 @@ const NumberReader = require('read-vn-number')
 
 NumberReader.read('100000000')
 // output: một trăm triệu
+```
+
+if you are working with **TypeScript**:
+
+```typescript
+import NumberReader from 'read-vn-number/src/NumberReader'
+
+NumberReader.read('1000000000')
+// output: một tỷ
 ```
 
 ## License
