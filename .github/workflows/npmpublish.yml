@@ -35,6 +35,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           registry-url: https://npm.pkg.github.com/
+          scope: '@hckhanh'
       - name: Publish to gpr
         if: github.event.action == 'published'
         run: npm publish
