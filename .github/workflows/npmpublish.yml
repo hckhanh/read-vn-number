@@ -36,7 +36,7 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com/
       - name: Publish to gpr
-          if: github.event.action == 'published'
-          run: npm publish
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: github.event.action == 'published'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
