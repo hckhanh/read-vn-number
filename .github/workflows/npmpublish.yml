@@ -12,7 +12,7 @@ jobs:
           node-version: 12
       - name: Check eslint and unit tests
         run: npm cit
-  publish-npm:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -32,16 +32,11 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-#  publish-gpr:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v1
-#      - uses: actions/setup-node@v1
-#        with:
-#          node-version: 12
-#          registry-url: https://npm.pkg.github.com/
-#          scope: '@your-github-username'
-#      - run: npm publish
-#        env:
-#          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: https://npm.pkg.github.com/
+      - name: Publish to gpr
+          if: github.event.action == 'published'
+          run: npm publish
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
