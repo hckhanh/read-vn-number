@@ -34,6 +34,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Configure for gpr
         uses: actions/setup-node@v1
+        if: github.event.action == 'published'
         with:
           registry-url: https://npm.pkg.github.com/
           scope: '@hckhanh'
