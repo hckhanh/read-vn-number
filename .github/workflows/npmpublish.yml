@@ -12,7 +12,7 @@ jobs:
           node-version: 12
       - name: Check eslint and unit tests
         run: npm cit
-  publish:
+  publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -32,12 +32,22 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Configure for gpr
-        uses: actions/setup-node@v1
-        if: github.event.action == 'published'
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
+          node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@hckhanh'
+      - name: Build commonjs, es6, esnext and amd
+        run: |
+          npm run build:cjs
+          npm run build:es6
+          npm run build:esnext
+          npm run build:amd
       - name: Publish to gpr
         if: github.event.action == 'published'
         run: npm publish
