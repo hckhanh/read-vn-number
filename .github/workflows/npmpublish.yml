@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org/
       - name: Build commonjs, es6, esnext and amd
         run: |
           npm run build:cjs
@@ -43,15 +43,15 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@hckhanh'
       - name: Build commonjs, es6, esnext and amd
         run: |
           npm run build:cjs
           npm run build:es6
           npm run build:esnext
           npm run build:amd
+      - name: Update .npmrc for gpr auth
+        run: |
+          npm set //npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}
+          npm set registry=https://npm.pkg.github.com/@hckhanh
       - name: Publish to gpr
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
