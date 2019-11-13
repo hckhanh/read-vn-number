@@ -1,0 +1,36 @@
+name: Publish GPR Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - name: Check eslint and unit tests
+        run: npm cit
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - name: Build commonjs, es6, esnext and amd
+        run: |
+          npm run build:cjs
+          npm run build:es6
+          npm run build:esnext
+          npm run build:amd
+      - name: Update .npmrc for gpr auth
+        run: |
+          npm set //npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}
+          npm set registry=https://npm.pkg.github.com/@hckhanh
+      - name: Publish to gpr
+        run: npm publish
