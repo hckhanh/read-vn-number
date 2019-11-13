@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
+          registry-url: 'https://registry.npmjs.org'
       - name: Build commonjs, es6, esnext and amd
         run: |
           npm run build:cjs
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
+          registry-url: 'https://npm.pkg.github.com'
           scope: '@hckhanh'
       - name: Build commonjs, es6, esnext and amd
         run: |
