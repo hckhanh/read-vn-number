@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [8, 10, 12]
+        node: [10, 12, 13]
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node }}
+      - name: Use Node.js ${{matrix.node}}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{matrix.node}}
       - name: Check eslint and unit tests
         run: npm cit
   coverage:
@@ -41,4 +41,4 @@ jobs:
         if: success()
         run: ./cc-test-reporter after-build --exit-code 0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{secrets.CODE_CLIMATE_REPORTER_ID}}
