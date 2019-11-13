@@ -15,9 +15,9 @@ jobs:
       matrix:
         node: [10, 12, 13]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
       - name: Use Node.js ${{matrix.node}}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: ${{matrix.node}}
       - name: Check eslint and unit tests
@@ -25,9 +25,9 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
       - name: Use Node.js 12
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: 12
       - name: Download CodeClimade Test Reporter
