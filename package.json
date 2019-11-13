@@ -22,6 +22,9 @@
     "type": "git",
     "url": "https://github.com/hckhanh/read-vn-number.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "reader",
     "read",
@@ -51,19 +54,19 @@
   "author": "Khanh Hoang",
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "^4.2.0",
+    "@types/chai": "^4.2.5",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.3",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
+    "@types/node": "^12.12.7",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
-    "eslint": "^6.3.0",
-    "eslint-config-prettier": "^6.1.0",
-    "mocha": "^6.2.0",
-    "prettier": "1.18.2",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.6.2"
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "mocha": "^6.2.2",
+    "prettier": "1.19.1",
+    "ts-node": "^8.5.0",
+    "typescript": "^3.7.2"
   },
   "dependencies": {}
 }
