@@ -27,7 +27,7 @@ export default class Numbers {
    * @param s the current string of the {@link Numbers}
    * @param firstNumber indicate that this is the first {@link Numbers}
    * @param beforeBillion indicate that this {@link Numbers} is before a {@link Billion} number
-   * @return the string after suffixing "nghìn"
+   * @return the string after suffixing "nghìn".
    */
   private static suffixFirstAndBeforeBillion(
     s: string,
