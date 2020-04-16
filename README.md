@@ -47,7 +47,7 @@ readNumber('100000000')
 // output: một trăm triệu
 ```
 
-if you are working with **TypeScript**, you can directly import from the source:
+If you are working with **TypeScript**, you can directly import from the source:
 
 ```typescript
 import readNumber from 'read-vn-number/src'
