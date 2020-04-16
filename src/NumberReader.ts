@@ -10,15 +10,10 @@ export default class NumberReader {
   /**
    * Read a number in Vietnamese language
    * @param number the number to read
-   * @return a string of the number is read in vietnamese
+   * @return a string of the number is read in Vietnamese
    */
   public static read(number: string | number): string {
-    let s = ''
-    if (typeof number === 'number') {
-      s = number.toString()
-    } else {
-      s = number
-    }
+    const s = typeof number === 'number' ? number.toString() : number
 
     const numberGroups = this.getGroupNumbers(s)
     const numbers = this.mapToNumbers(numberGroups)
@@ -28,11 +23,11 @@ export default class NumberReader {
   /**
    * Convert all {@link Numbers} objects to a string
    * @param numbers an array of {@link Numbers} objects
-   * @return a {@link string} of the number is read in vietnamese
+   * @return a {@link string} of the number is read in Vietnamese
    */
   private static readNumbers(numbers: Numbers[]): string {
     return numbers
-      .reduce(function(result, group: Numbers, index: number) {
+      .reduce(function (result, group: Numbers, index: number) {
         const beforeBillion =
           index + 1 < numbers.length && numbers[index + 1] instanceof Billion
         return result.trim() + ' ' + group.read(index === 0, beforeBillion)
