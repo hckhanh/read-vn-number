@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Check eslint and unit tests
-        run: npm cit
+        run: npm it
       - name: Bump new version
         run: |
           git config --local user.name "github-actions"
