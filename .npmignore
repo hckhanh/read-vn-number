@@ -10,19 +10,18 @@ tsconfig.*
 # Coverage directory used by tools like istanbul
 coverage
 
+# resource files
+.*rc*
+
 # nyc test coverage
-.nycrc
 .nyc_output
 
-# prettier
-.prettierrc.yml
-
 # eslint
-.eslintrc.yml
 .eslintignore
 
 # github
 .github
+.dependabot
 
 # source
 src
