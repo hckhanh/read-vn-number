@@ -1,0 +1,9 @@
+{
+  "types": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug Fixes" },
+    { "type": "deps", "section": "Dependencies" },
+    { "type": "perf", "section": "Optimizations" },
+    { "type": "revert", "section": "Reverts" }
+  ]
+}
