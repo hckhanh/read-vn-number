@@ -1,0 +1,14 @@
+version: 1
+update_configs:
+  - directory: '/'
+    package_manager: 'javascript'
+    update_schedule: 'daily'
+    automerged_updates:
+      - match:
+          dependency_type: 'production'
+          update_type: 'security:patch'
+    default_reviewers:
+      - hckhanh
+    commit_message:
+      prefix: 'deps'
+      include_scope: true
