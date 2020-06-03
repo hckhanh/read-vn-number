@@ -3,6 +3,7 @@
     { "type": "feat", "section": "Features" },
     { "type": "fix", "section": "Bug Fixes" },
     { "type": "deps", "section": "Dependencies" },
+    { "type": "improvement", "section": "Improvements" },
     { "type": "perf", "section": "Optimizations" },
     { "type": "revert", "section": "Reverts" }
   ]
