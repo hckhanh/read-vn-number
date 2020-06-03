@@ -1,14 +1,13 @@
 version: 2
 updates:
-- package-ecosystem: npm
+- package-ecosystem: "npm"
   directory: "/"
   schedule:
-    interval: daily
-    time: '00:00'
-    timezone: Asia/Saigon
+    interval: "daily"
+    timezone: "Asia/Saigon"
   open-pull-requests-limit: 10
   reviewers:
-  - hckhanh
+  - "hckhanh"
   commit-message:
-    prefix: deps
-    include: scope
+    prefix: "deps"
+    include: "scope"
