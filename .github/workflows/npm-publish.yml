@@ -5,23 +5,14 @@ on:
     types: [published]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: 12
-      - name: Check eslint and unit tests
-        run: npm cit
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
           node-version: 12
+          check-latest: true
           registry-url: https://registry.npmjs.org/
       - name: Build commonjs, es6, esnext and amd
         run: |
