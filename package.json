@@ -63,6 +63,7 @@
     "@typescript-eslint/parser": "^2.31.0",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
+    "dependency-cruiser": "^9.11.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
