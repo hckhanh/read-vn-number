@@ -28,7 +28,7 @@ jobs:
     needs: check
     strategy:
       matrix:
-        node: [ 12, 13, 14 ]
+        node: [12, 13, 14]
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js ${{matrix.node}}
