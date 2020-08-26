@@ -15,9 +15,8 @@
     "build:es6": "tsc --build tsconfig.es6.json",
     "build:esnext": "tsc --build tsconfig.esnext.json",
     "build:amd": "tsc --build tsconfig.amd.json",
-    "pretest": "eslint src --ext .ts",
     "test": "mocha -r ts-node/register tests/**/*.ts",
-    "test:deps": "depcruise --config .dependency-cruiser.js .",
+    "test:deps": "depcruise --config .dependency-cruiser.js src",
     "test:prettier": "prettier --check .",
     "test:eslint": "eslint src --ext .ts --max-warnings 10",
     "release": "standard-version"
