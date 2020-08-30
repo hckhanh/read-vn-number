@@ -8,8 +8,8 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v2.3.2
+      - uses: actions/setup-node@v2.1.1
         with:
           node-version: 12
           check-latest: true
