@@ -23,6 +23,8 @@ jobs:
         run: npm run test:prettier
       - name: ESLint check
         run: npm run test:eslint
+      - name: Skypack check
+        run: npm run test:skypack
   test:
     needs: check
     runs-on: ubuntu-latest
