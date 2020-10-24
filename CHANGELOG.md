@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/hckhanh/read-vn-number/compare/v3.0.0...v3.1.0) (2020-10-24)
+
+
+### Features
+
+* **analysis:** add CodeQL workflow ([af2cf53](https://github.com/hckhanh/read-vn-number/commit/af2cf5327bc4972070839fe567b6fea861cc0e6a))
+
+
+### Bug Fixes
+
+* **workflow:** correct version of actions/checkout and actions/setup-node actions ([8ebc9b5](https://github.com/hckhanh/read-vn-number/commit/8ebc9b5f522bd6a9a739757138ee0c92e8a60d4e))
+
+
+### Dependencies
+
+* **deps-dev:** bump @commitlint/cli from 9.1.2 to 11.0.0 ([#106](https://github.com/hckhanh/read-vn-number/issues/106)) ([762bd33](https://github.com/hckhanh/read-vn-number/commit/762bd33522ab61fd6b534a0cec4b64482f534bbd))
+* **deps-dev:** bump @commitlint/config-conventional ([#107](https://github.com/hckhanh/read-vn-number/issues/107)) ([5c4dc7d](https://github.com/hckhanh/read-vn-number/commit/5c4dc7dc30587df4bf4e4a3813bfbed3d6656ba0))
+* **deps-dev:** bump @types/node from 14.6.0 to 14.6.2 ([#99](https://github.com/hckhanh/read-vn-number/issues/99)) ([d8696c5](https://github.com/hckhanh/read-vn-number/commit/d8696c56f285d478f9e1938a2833ca59ef160ddd))
+* **deps-dev:** bump @types/node from 14.6.2 to 14.14.2 ([#123](https://github.com/hckhanh/read-vn-number/issues/123)) ([9f66846](https://github.com/hckhanh/read-vn-number/commit/9f668469dc53e83d71e0e00869e7957a41b86de8))
+* **deps-dev:** bump dependency-cruiser from 9.11.1 to 9.12.0 ([#96](https://github.com/hckhanh/read-vn-number/issues/96)) ([1c8a114](https://github.com/hckhanh/read-vn-number/commit/1c8a1149c694242899dd44f72017b00ed2ebeed5))
+* **deps-dev:** bump dependency-cruiser from 9.12.0 to 9.15.1 ([#120](https://github.com/hckhanh/read-vn-number/issues/120)) ([f851d78](https://github.com/hckhanh/read-vn-number/commit/f851d78fcf892be0c3f72789125255b680b4650e))
+* **deps-dev:** bump husky from 4.2.5 to 4.3.0 ([#103](https://github.com/hckhanh/read-vn-number/issues/103)) ([e25d5c0](https://github.com/hckhanh/read-vn-number/commit/e25d5c019ee379402ce9972a062132a10e11c75e))
+* **deps-dev:** bump mocha from 8.1.2 to 8.1.3 ([#98](https://github.com/hckhanh/read-vn-number/issues/98)) ([fcf33f8](https://github.com/hckhanh/read-vn-number/commit/fcf33f875fcfe65c02162a86d8959d5fa96123c0))
+
 ## [3.0.0](https://github.com/hckhanh/read-vn-number/compare/v2.0.2...v3.0.0) (2020-08-26)
 
 
