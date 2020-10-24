@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/hckhanh/read-vn-number/compare/v3.1.0...v3.2.1) (2020-10-24)
+
+
+### Bug Fixes
+
+* **gpr:** fix GPR workflow to publish GPR package ([b9c41ba](https://github.com/hckhanh/read-vn-number/commit/b9c41bad8963c3356a58af9dd32475e4738977fc))
+
 ## [3.2.0](https://github.com/hckhanh/read-vn-number/compare/v3.0.0...v3.2.0) (2020-10-24)
 
 
