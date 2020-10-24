@@ -5,6 +5,7 @@ updates:
     schedule:
       interval: 'daily'
       timezone: 'Asia/Saigon'
+    open-pull-requests-limit: 20
     reviewers:
       - 'hckhanh'
     commit-message:
@@ -15,6 +16,7 @@ updates:
     schedule:
       interval: 'daily'
       timezone: 'Asia/Saigon'
+    open-pull-requests-limit: 20
     reviewers:
       - 'hckhanh'
     commit-message:
