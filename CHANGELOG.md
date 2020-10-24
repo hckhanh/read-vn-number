@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/hckhanh/read-vn-number/compare/v3.0.0...v3.2.0) (2020-10-24)
+
+
+### Features
+
+* **analysis:** add CodeQL workflow ([af2cf53](https://github.com/hckhanh/read-vn-number/commit/af2cf5327bc4972070839fe567b6fea861cc0e6a))
+* **package:** replace .npmignore by `files` property to ignore unused files ([9740be7](https://github.com/hckhanh/read-vn-number/commit/9740be7a2c9c1d6df416cd80e7955b234acbae4a))
+
+
+### Bug Fixes
+
+* **styles:** fix code styling for codeql-analysis.yml ([edc12c2](https://github.com/hckhanh/read-vn-number/commit/edc12c21c9ea637f6be1232adbae3409b3acf644))
+* **workflow:** correct version of actions/checkout and actions/setup-node actions ([8ebc9b5](https://github.com/hckhanh/read-vn-number/commit/8ebc9b5f522bd6a9a739757138ee0c92e8a60d4e))
+
+
+### Dependencies
+
+* **deps-dev:** bump @commitlint/cli from 9.1.2 to 11.0.0 ([#106](https://github.com/hckhanh/read-vn-number/issues/106)) ([762bd33](https://github.com/hckhanh/read-vn-number/commit/762bd33522ab61fd6b534a0cec4b64482f534bbd))
+* **deps-dev:** bump @commitlint/config-conventional ([#107](https://github.com/hckhanh/read-vn-number/issues/107)) ([5c4dc7d](https://github.com/hckhanh/read-vn-number/commit/5c4dc7dc30587df4bf4e4a3813bfbed3d6656ba0))
+* **deps-dev:** bump @types/node from 14.6.0 to 14.6.2 ([#99](https://github.com/hckhanh/read-vn-number/issues/99)) ([d8696c5](https://github.com/hckhanh/read-vn-number/commit/d8696c56f285d478f9e1938a2833ca59ef160ddd))
+* **deps-dev:** bump @types/node from 14.6.2 to 14.14.2 ([#123](https://github.com/hckhanh/read-vn-number/issues/123)) ([9f66846](https://github.com/hckhanh/read-vn-number/commit/9f668469dc53e83d71e0e00869e7957a41b86de8))
+* **deps-dev:** bump dependency-cruiser from 9.11.1 to 9.12.0 ([#96](https://github.com/hckhanh/read-vn-number/issues/96)) ([1c8a114](https://github.com/hckhanh/read-vn-number/commit/1c8a1149c694242899dd44f72017b00ed2ebeed5))
+* **deps-dev:** bump dependency-cruiser from 9.12.0 to 9.15.1 ([#120](https://github.com/hckhanh/read-vn-number/issues/120)) ([f851d78](https://github.com/hckhanh/read-vn-number/commit/f851d78fcf892be0c3f72789125255b680b4650e))
+* **deps-dev:** bump eslint-config-prettier from 6.11.0 to 6.14.0 ([#127](https://github.com/hckhanh/read-vn-number/issues/127)) ([b5094d0](https://github.com/hckhanh/read-vn-number/commit/b5094d0bda1cfb566c3fe956c9f1184ffd06b2c5))
+* **deps-dev:** bump husky from 4.2.5 to 4.3.0 ([#103](https://github.com/hckhanh/read-vn-number/issues/103)) ([e25d5c0](https://github.com/hckhanh/read-vn-number/commit/e25d5c019ee379402ce9972a062132a10e11c75e))
+* **deps-dev:** bump mocha from 8.1.2 to 8.1.3 ([#98](https://github.com/hckhanh/read-vn-number/issues/98)) ([fcf33f8](https://github.com/hckhanh/read-vn-number/commit/fcf33f875fcfe65c02162a86d8959d5fa96123c0))
+* **deps-dev:** bump mocha from 8.1.3 to 8.2.0 ([#129](https://github.com/hckhanh/read-vn-number/issues/129)) ([79d4306](https://github.com/hckhanh/read-vn-number/commit/79d4306b40877973d92fc65ed55504cfee0b5845))
+* **deps-dev:** bump prettier from 2.1.1 to 2.1.2 ([#128](https://github.com/hckhanh/read-vn-number/issues/128)) ([6999b37](https://github.com/hckhanh/read-vn-number/commit/6999b377186a9a22c10c4b3e5db26991d06cb05a))
+* **deps-dev:** bump typescript from 4.0.2 to 4.0.3 ([#126](https://github.com/hckhanh/read-vn-number/issues/126)) ([63b2cbb](https://github.com/hckhanh/read-vn-number/commit/63b2cbbf451ca401f1d3005d05f2e7e3486a060e))
+
 ## [3.1.0](https://github.com/hckhanh/read-vn-number/compare/v3.0.0...v3.1.0) (2020-10-24)
 
 
