@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.3
       - name: Use Node.js ${{matrix.node}}
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.1.3
         with:
           node-version: 12
           check-latest: true
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.3
       - name: Use Node.js ${{matrix.node}}
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.1.3
         with:
           node-version: ${{matrix.node}}
       - name: Unit tests
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.3
       - name: Use Node.js 12
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.1.3
         with:
           node-version: 12
           check-latest: true
