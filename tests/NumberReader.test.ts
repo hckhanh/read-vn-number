@@ -4,7 +4,7 @@ import NumberReader from '../src/NumberReader'
 describe('NumberReader', function () {
   it('should throw error when read number: a.000', function () {
     const number: string = 'a000'
-    expect(() => NumberReader.read(number)).to.throw('Invalid number: a')
+    expect(() => NumberReader.read(number)).to.throw(`Invalid number: "a"`)
   })
 
   it('should read number: 1.000', function () {

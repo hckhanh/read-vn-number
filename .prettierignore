@@ -1,4 +1,7 @@
 coverage
-dist
+cjs
+es
+types
 .nyc_output
 CHANGELOG.md
+/tsconfig.json

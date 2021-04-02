@@ -1,5 +1,7 @@
 # Changelog
 
+## Note: From `v4.0.0`, please go to [releases](https://github.com/hckhanh/read-vn-number/releases) page to get information.
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [3.2.1](https://github.com/hckhanh/read-vn-number/compare/v3.1.0...v3.2.1) (2020-10-24)

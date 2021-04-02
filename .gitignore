@@ -13,13 +13,25 @@ node_modules/
 .eslintcache
 
 # builds
-dist
+cjs
+es
+types
 
-# JetBrains IDEs
+# Editors
 .idea
+.vscode
 
 # Coverage directory used by tools like istanbul
 coverage
 
 # nyc test coverage
 .nyc_output
+
+# yarn 2 (Zero-Installs)
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

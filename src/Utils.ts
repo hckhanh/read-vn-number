@@ -19,7 +19,7 @@ const NumberMap: { [key: string]: string } = {
  */
 export class NotNumberError extends Error {
   constructor(wrongNumber?: string) {
-    super(`Invalid number: ${wrongNumber}`)
+    super(`Invalid number: ${JSON.stringify(wrongNumber)}`)
     Object.setPrototypeOf(this, new.target.prototype) // restore prototype chain
   }
 }

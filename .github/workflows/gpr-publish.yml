@@ -17,9 +17,8 @@ jobs:
       - name: Build commonjs, es6, esnext and amd
         run: |
           npm run build:cjs
-          npm run build:es6
-          npm run build:esnext
-          npm run build:amd
+          npm run build:es
+          npm run build:types
       - name: Publish to gpr
         run: npm publish
         env:
