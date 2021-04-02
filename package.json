@@ -3,19 +3,12 @@
   "version": "3.2.1",
   "description": "Read Vietnamese number like a Vietnamese",
   "sideEffects": false,
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "module": "dist/es6/index.js",
-  "es2015": "dist/es6/index.js",
-  "esnext": {
-    "main": "dist/esnext/index.js"
-  },
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
   "exports": {
-    ".": {
-      "browser": "./dist/amd/index.js",
-      "import": "./dist/es6/index.js",
-      "require": "./dist/cjs/index.js"
-    }
+    "import": "./es/index.js",
+    "require": "./cjs/index.js"
   },
   "files": [
     "dist",
@@ -57,10 +50,9 @@
   "author": "Khanh Hoang",
   "license": "MIT",
   "scripts": {
-    "build:cjs": "tsc",
-    "build:es6": "tsc --build tsconfig.es6.json",
-    "build:esnext": "tsc --build tsconfig.esnext.json",
-    "build:amd": "tsc --build tsconfig.amd.json",
+    "build:cjs": "tsc --outDir cjs",
+    "build:es": "tsc --module esnext --outDir es",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir types",
     "test": "mocha -r ts-node/register tests/**/*.ts",
     "test:deps": "depcruise --config .dependency-cruiser.js src",
     "test:prettier": "prettier --check .",
@@ -75,13 +67,11 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.0.5",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
-    "babel-eslint": "^10.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "chai": "^4.2.0",
     "dependency-cruiser": "^9.11.1",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.23.0",
     "husky": "^4.2.5",
     "mocha": "^8.1.2",
     "prettier": "2.2.1",
