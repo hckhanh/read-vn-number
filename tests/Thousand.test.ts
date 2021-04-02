@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import Thousand from '../../src/Thousand'
+import Thousand from '../src/Thousand'
 
 describe('Thousand', function () {
   it('should read number: 060.000', function () {

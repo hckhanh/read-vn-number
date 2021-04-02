@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import NumberReader from '../../src/NumberReader'
+import NumberReader from '../src/NumberReader'
 
 describe('NumberReader', function () {
   it('should throw error when read number: a.000', function () {
