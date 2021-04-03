@@ -1,4 +1,8 @@
+# Generated files
 cjs
 es
 types
-tests
+
+# Yarn
+.yarn
+.pnp.*

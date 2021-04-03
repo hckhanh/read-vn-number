@@ -16,9 +16,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: Build commonjs, es6, esnext and amd
         run: |
-          npm run build:cjs
-          npm run build:es
-          npm run build:types
+          yarn build:cjs
+          yarn build:es
+          yarn build:types
       - name: Publish to gpr
         run: npm publish
         env:

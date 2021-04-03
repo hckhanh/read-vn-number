@@ -14,15 +14,15 @@ jobs:
         with:
           check-latest: true
       - name: Dependency check
-        run: npm ci
+        run: yarn --immutable --immutable-cache --check-cache
       - name: Dependency cruiser check
-        run: npm run test:deps
+        run: yarn test:deps
       - name: Prettier check
-        run: npm run test:prettier
+        run: yarn test:prettier
       - name: ESLint check
-        run: npm run test:eslint
+        run: yarn test:eslint
       - name: Skypack check
-        run: npm run test:skypack
+        run: yarn test:skypack
   test:
     needs: check
     runs-on: ubuntu-latest
@@ -36,4 +36,4 @@ jobs:
         with:
           node-version: ${{matrix.node}}
       - name: Unit tests
-        run: npm cit
+        run: yarn test

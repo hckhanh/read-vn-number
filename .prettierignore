@@ -1,7 +1,11 @@
+# Generated files
 coverage
 cjs
 es
 types
-.nyc_output
-CHANGELOG.md
+
 /tsconfig.json
+
+# Yarn
+.yarn
+.pnp.*
