@@ -5,6 +5,7 @@ es
 types
 
 /tsconfig.json
+/CHANGELOG.md
 
 # Yarn
 .yarn

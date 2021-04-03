@@ -48,6 +48,7 @@
   "author": "Khanh Hoang",
   "license": "MIT",
   "scripts": {
+    "format": "prettier --write .",
     "build:cjs": "tsc --outDir cjs",
     "build:es": "tsc --module esnext --outDir es",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir types",
