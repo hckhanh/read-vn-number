@@ -37,24 +37,3 @@ jobs:
           node-version: ${{matrix.node}}
       - name: Unit tests
         run: npm cit
-  coverage:
-    needs: check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Use Node.js 12
-        uses: actions/setup-node@v2.1.4
-        with:
-          check-latest: true
-      - name: Download CodeClimade Test Reporter
-        run: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
-      - name: Generate coverage report
-        run: npx nyc npm cit
-      - name: Upload coverage report
-        if: success()
-        run: ./cc-test-reporter after-build --exit-code 0
-        env:
-          CC_TEST_REPORTER_ID: ${{secrets.CODE_CLIMATE_REPORTER_ID}}
