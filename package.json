@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@skypack/package-check": "^0.2.2",
     "@types/chai": "^4",
     "@types/mocha": "^8",
