@@ -1,9 +1,15 @@
 version = 1
 
+exclude_patterns = [".pnp.js"]
+
 [[analyzers]]
 name = "javascript"
 enabled = true
 
 [[transformers]]
 name = "prettier"
+enabled = true
+
+[[transformers]]
+name = "standardjs"
 enabled = true
