@@ -2931,12 +2931,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"husky@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "husky@npm:6.0.0"
+"husky@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "husky@npm:8.0.2"
   bin:
     husky: lib/bin.js
-  checksum: 61e1f7f53f3c969d361c2a1d4ed8018b9447406ea6cd644a2526d18b76877d135001d8cbd48a1d201fc1614d96995e691ecd2b82a8d8513a6b4a313da1188ccd
+  checksum: 199dca5b9f805cbbaebcedbaac23c098019dc5140a95ed235d267f0d0d672e02ca912de98d3964256a09a24a69c7809de3ebafff0d2458d7aad255939dfee319
   languageName: node
   linkType: hard
 
@@ -5019,7 +5019,7 @@ fsevents@~2.3.1:
     chai: ^4.3.4
     dependency-cruiser: ^9.24.0
     eslint: ^7.23.0
-    husky: ^6.0.0
+    husky: ^8.0.2
     mocha: ^8.3.2
     prettier: 2.2.1
     semantic-release: ^17.4.2
