@@ -701,10 +701,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14":
-  version: 14.14.37
-  resolution: "@types/node@npm:14.14.37"
-  checksum: 5e2d9baf7594ebacaf016716515f30de0765169412787f981481c2fb8b468923149bb9e2e3219ee672399811672ceddc339a7372a61cf15bc656836a5494d991
+"@types/node@npm:^18":
+  version: 18.11.17
+  resolution: "@types/node@npm:18.11.17"
+  checksum: 4acad0d6c9c4b2c901168bf360ff37a76d1ad4dc727156c4a34d284fb61d87a275414658e78242ab8a977808720bf3fcadcd6f6276e2540e5cd14040f53c3656
   languageName: node
   linkType: hard
 
@@ -5013,7 +5013,7 @@ fsevents@~2.3.1:
     "@skypack/package-check": ^0.2.2
     "@types/chai": ^4
     "@types/mocha": ^8
-    "@types/node": ^14
+    "@types/node": ^18
     "@typescript-eslint/eslint-plugin": ^4.20.0
     "@typescript-eslint/parser": ^4.20.0
     chai: ^4.3.4
