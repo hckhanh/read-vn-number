@@ -23,7 +23,7 @@ jobs:
       - name: Skypack check
         run: yarn test:skypack
   test:
-    needs: check
+    needs: lints
     runs-on: ubuntu-latest
     strategy:
       matrix:
