@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
+  "extends": [
+    "config:js-app",
+    ":automergePr",
+    ":automergeMinor",
+    ":automergeTypes",
+    "npm:unpublishSafe",
+    "group:definitelyTyped",
+    ":separateMultipleMajorReleases",
+    ":automergeRequireAllStatusChecks"
+  ],
+  "timezone": "Asia/Ho_Chi_Minh",
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "packageRules": []
+}

@@ -27,7 +27,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Yarn 2 (Zero-Installs + Plug'n'Play)
+# Yarn (Zero-Installs + Plug'n'Play)
 .yarn/*
 !.yarn/cache
 !.yarn/patches
