@@ -4960,7 +4960,7 @@ const RAW_RUNTIME_STATE =
           ["normalize-package-data", "npm:2.5.0"],\
           ["hosted-git-info", "npm:2.8.8"],\
           ["resolve", "patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d"],\
-          ["semver", "npm:5.7.1"],\
+          ["semver", "npm:5.7.2"],\
           ["validate-npm-package-license", "npm:3.0.4"]\
         ],\
         "linkType": "HARD"\
@@ -6201,10 +6201,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["semver", [\
-      ["npm:5.7.1", {\
-        "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-fbc71cf007.zip/node_modules/semver/",\
+      ["npm:5.7.2", {\
+        "packageLocation": "./.yarn/cache/semver-npm-5.7.2-938ee91eaa-fca14418a1.zip/node_modules/semver/",\
         "packageDependencies": [\
-          ["semver", "npm:5.7.1"]\
+          ["semver", "npm:5.7.2"]\
         ],\
         "linkType": "HARD"\
       }],\
