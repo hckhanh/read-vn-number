@@ -1767,7 +1767,7 @@ const RAW_RUNTIME_STATE =
           ["assertion-error", "npm:1.1.0"],\
           ["check-error", "npm:1.0.2"],\
           ["deep-eql", "npm:3.0.1"],\
-          ["get-func-name", "npm:2.0.0"],\
+          ["get-func-name", "npm:2.0.2"],\
           ["pathval", "npm:1.1.1"],\
           ["type-detect", "npm:4.0.8"]\
         ],\
@@ -3125,10 +3125,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["get-func-name", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/get-func-name-npm-2.0.0-afbf363765-8d82e69f3e.zip/node_modules/get-func-name/",\
+      ["npm:2.0.2", {\
+        "packageLocation": "./.yarn/cache/get-func-name-npm-2.0.2-409dbe3703-3f62f4c236.zip/node_modules/get-func-name/",\
         "packageDependencies": [\
-          ["get-func-name", "npm:2.0.0"]\
+          ["get-func-name", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
