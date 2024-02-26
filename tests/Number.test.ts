@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import { describe, expect, it } from 'vitest'
 import Numbers from '../src/Numbers'
 
 describe('Numbers', function () {

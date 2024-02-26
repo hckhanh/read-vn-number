@@ -12,14 +12,16 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v2.3.4
+      - uses: pnpm/action-setup@v3.0.0
       - uses: actions/setup-node@v2.1.4
         with:
+          cache: 'pnpm'
           registry-url: https://npm.pkg.github.com/
       - name: Build commonjs, es6, esnext and amd
         run: |
-          yarn build:cjs
-          yarn build:es
-          yarn build:types
+          pnpm build:cjs
+          pnpm build:es
+          pnpm build:types
       - name: Install jq
         uses: dcarbone/install-jq-action@v2.1.0
       - name: Update version in deno.json

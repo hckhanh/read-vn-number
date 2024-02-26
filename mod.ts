@@ -3,7 +3,8 @@
  *
  * @example
  * ```ts
- * import readNumber from 'read-vn-number'
+ * import readNumber from '@hckhanh/read-vn-number'
+ * // import readNumber from 'jsr:@hckhanh/read-vn-number' // (for deno)
  *
  * readNumber('19990000') // or readNumber(19990000)
  * // output: mười chín triệu chín trăm chín mươi nghìn

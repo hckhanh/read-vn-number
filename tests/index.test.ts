@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import { describe, expect, it } from 'vitest'
 import readNumber from '../src'
 
 describe('index', function () {

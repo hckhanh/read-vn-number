@@ -17,6 +17,14 @@ npm i read-vn-number
 
 # yarn
 yarn add read-vn-number
+
+# pnpm
+yarn add read-vn-number
+
+# jsr
+npx jsr add @hckhanh/read-vn-number
+yarn dlx jsr add @hckhanh/read-vn-number
+pnpm dlx jsr add @hckhanh/read-vn-number
 ```
 
 ### GitHub Package Registry (GPR)
@@ -29,6 +37,7 @@ Import and use in **ES6**+:
 
 ```js
 import readNumber from 'read-vn-number'
+// import readNumber from '@hckhanh/read-vn-number' // (if you are using jsr)
 
 readNumber('19990000') // or readNumber(19990000)
 // output: mười chín triệu chín trăm chín mươi nghìn

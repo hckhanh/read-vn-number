@@ -2,7 +2,3 @@
 cjs
 es
 types
-
-# Yarn
-.yarn
-.pnp.*
