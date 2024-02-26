@@ -8,6 +8,8 @@
     ":automergeTypes",
     "npm:unpublishSafe",
     "group:definitelyTyped",
+    ":semanticCommitTypeAll(deps)",
+    ":semanticCommitScopeDisabled",
     ":separateMultipleMajorReleases",
     ":automergeRequireAllStatusChecks"
   ],

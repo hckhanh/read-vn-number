@@ -1,0 +1,5 @@
+{
+  "name": "@hckhanh/read-vn-number",
+  "version": "0.0.0-development",
+  "exports": "./mod.ts"
+}

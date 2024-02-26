@@ -59,5 +59,5 @@
     /* Other Options */
     // "resolveJsonModule": true              /* allows for importing, extracting types from and generating .json files. */
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.ts", "mod.ts"]
 }
